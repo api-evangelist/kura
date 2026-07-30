@@ -1,7 +1,27 @@
 aid: kura
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kura.png
 name: Kura
-description: Kura is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Kura is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
+  network as a stub for enrichment. An enrichment pass on 2026-07-19 found no live company or
+  developer surface behind this profile. The domain kura.tech resolves to GoDaddy nameservers and
+  serves a parked-domain lander on every path, returning HTTP 200 for arbitrary URLs (a soft-404
+  catch-all), so no documentation, API reference, OpenAPI, SDK, or /.well-known artifact could be
+  verified. The domain publishes no MX, SPF, DMARC, CAA, or DNSSEC records, indicating it is not in
+  active operational use. No first-party GitHub organization was identified. The only artifact
+  captured is a probed domain-security posture. This profile remains a dormant lead pending a
+  confirmed live website for the company.
 url: https://raw.githubusercontent.com/api-evangelist/kura/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +29,21 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment-status: no-live-surface
+x-enrichment-checked: '2026-07-19'
+x-enrichment-finding: >-
+  kura.tech is a parked GoDaddy domain serving a lander on all paths with a 200 soft-404 catch-all.
+  No developer surface, no event surface, no packages, no MCP server, and no verifiable
+  /.well-known documents. Re-run enrichment if a live website is confirmed.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Portfolio Lead
+- 500 Global
+- Dormant
+- Parked Domain
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +51,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/kura-domain-security.yml
 - type: Website
   url: https://kura.tech
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
