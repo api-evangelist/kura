@@ -35,7 +35,7 @@ x-enrichment-finding: >-
   kura.tech is a parked GoDaddy domain serving a lander on all paths with a 200 soft-404 catch-all.
   No developer surface, no event surface, no packages, no MCP server, and no verifiable
   /.well-known documents. Re-run enrichment if a live website is confirmed.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
